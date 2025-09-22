@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Color Reference Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 30px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: darkblue; /* Color name */
+    }
+
+    .color-box {
+      padding: 20px;
+      margin: 15px 0;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    /* 1. Named color */
+    .named-color {
+      background-color: tomato;
+    }
+
+    /* 2. Hexadecimal color */
+    .hex-color {
+      background-color: #4CAF50;
+    }
+
+    /* 3. RGB color */
+    .rgb-color {
+      background-color: rgb(0, 128, 255);
+    }
+
+    /* 4. RGBA color (with transparency) */
+    .rgba-color {
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+
+    /* 5. HSL color */
+    .hsl-color {
+      background-color: hsl(120, 60%, 50%);
+    }
+
+    /* 6. HSLA color (with transparency) */
+    .hsla-color {
+      background-color: hsla(60, 100%, 50%, 0.3);
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<h1>CSS Color Reference Demo</h1>
+
+<div class="color-box named-color">Named Color: tomato</div>
+<div class="color-box hex-color">Hex Color: #4CAF50</div>
+<div class="color-box rgb-color">RGB Color: rgb(0, 128, 255)</div>
+<div class="color-box rgba-color">RGBA Color: rgba(255, 0, 0, 0.5)</div>
+<div class="color-box hsl-color">HSL Color: hsl(120, 60%, 50%)</div>
+<div class="color-box hsla-color">HSLA Color: hsla(60, 100%, 50%, 0.3)</div>
+
+</body>
+</html>

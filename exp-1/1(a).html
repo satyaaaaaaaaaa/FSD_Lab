@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Lists Example</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      padding: 24px;
+      max-width: 900px;
+      margin: auto;
+      background: #f7f7fb;
+      color: #111;
+    }
+    h1 { font-size: 28px; margin-bottom: 6px; }
+    h2 { font-size: 20px; margin-top: 22px; margin-bottom: 8px; }
+    .example { background:#fff; border:1px solid #e0e0e6; padding:16px; border-radius:8px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+    pre { background:#f0f2f6; padding:12px; border-radius:6px; overflow:auto; }
+    .note { font-size:0.95rem; color:#444; margin-top:8px; }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Lists — Examples</h1>
+  <p class="note">This page shows different types of lists: ordered, unordered, nested lists, an ordered list inside an unordered list, and a definition list.</p>
+
+  <h2>1. Ordered list (&lt;ol&gt;)</h2>
+  <div class="example">
+    <p>Example HTML:</p>
+    <pre>&lt;ol&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+    <p>Rendered output:</p>
+    <ol>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
+  </div>
+
+  <h2>2. Unordered list (&lt;ul&gt;)</h2>
+  <div class="example">
+    <p>Example HTML:</p>
+    <pre>&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Bananas&lt;/li&gt;
+  &lt;li&gt;Cherries&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+    <p>Rendered output:</p>
+    <ul>
+      <li>Apples</li>
+      <li>Bananas</li>
+      <li>Cherries</li>
+    </ul>
+  </div>
+
+  <h2>3. Nested lists (mixing &lt;ul&gt; and &lt;ol&gt;)</h2>
+  <div class="example">
+    <p>Example HTML (a nested unordered list inside an ordered list):</p>
+    <pre>&lt;ol&gt;
+  &lt;li&gt;Fruits
+    &lt;ul&gt;
+      &lt;li&gt;Citrus

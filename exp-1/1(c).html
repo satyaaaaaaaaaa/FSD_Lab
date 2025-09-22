@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Profile Links with Images</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7fb;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 24px;
+    }
+    .profile-pics {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .profile-pics a img {
+      width: 200px;    /* set the width */
+      height: 200px;   /* set the height */
+      object-fit: cover;  /* crops image nicely if aspect ratio differs */
+      border-radius: 12px;
+      border: 3px solid #ccc;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .profile-pics a img:hover {
+      transform: scale(1.05);
+      border-color: #333;
+    }
+    .caption {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Profiles</h1>
+  <div class="profile-pics">
+    <!-- Your image and link -->
+    <div>
+      <a href="https://example.com/your-profile" target="_blank">
+        <img src="your-photo.jpg" alt="Your Name">
+      </a>
+      <div class="caption">Your Name</div>
+    </div>
+
+    <!-- Friend's image and link -->
+    <div>
+      <a href="https://example.com/friend-profile" target="_blank">
+        <img src="friend-photo.jpg" alt="Friend's Name">
+      </a>
+      <div class="caption">Friend's Name</div>
+    </div>
+  </div>
+
+</body>
+</html>

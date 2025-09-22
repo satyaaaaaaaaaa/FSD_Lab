@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSS Selector Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* 1. SIMPLE SELECTORS */
+
+    /* Element selector */
+    p {
+      color: darkblue;
+    }
+
+    /* ID selector */
+    #highlight {
+      background-color: yellow;
+      padding: 5px;
+    }
+
+    /* Class selector */
+    .important {
+      font-weight: bold;
+      color: red;
+    }
+
+    /* Group selector */
+    h1, h2 {
+      text-align: center;
+      color: green;
+    }
+
+    /* Universal selector */
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* 2. COMBINATOR SELECTORS */
+
+    /* Descendant selector */
+    div p {
+      border: 1px dashed #333;
+      padding: 5px;
+    }
+
+    /* Child selector */
+    div > p.child {
+      background-color: #e0f7fa;
+    }
+
+    /* Adjacent sibling selector */
+    h2 + p {
+      color: purple;
+    }
+
+    /* General sibling selector */
+    h2 ~ p.general {
+      font-style: italic;
+    }
+
+    /* 3. PSEUDO-CLASS SELECTORS */
+
+    /* Hover pseudo-class */
+    a:hover {
+      color: orange;
+    }
+
+    /* First-child pseudo-class */
+    ul li:first-child {
+      font-weight: bold;
+    }
+
+    /* Last-child pseudo-class */
+    ul li:last-child {
+      color: green;
+    }
+
+    /* 4. PSEUDO-ELEMENT SELECTORS */
+
+    /* Before pseudo-element */
+    h3::before {
+      content: "★ ";
+      color: gold;
+    }
+
+    /* After pseudo-element */
+    h3::after {
+      content: " ★";
+      color: gold;
+    }
+
+    /* 5. ATTRIBUTE SELECTORS */
+
+    /* Any element with title attribute */
+    [title] {
+      text-decoration: underline;
+      cursor: help;
+    }
+
+    /* Exact match */
+    a[target="_blank"] {
+      color: red;
+    }
+
+    /* Partial match */
+    a[href*="example"] {
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>CSS Selector Demonstration</h1>
+<h2>Simple Selectors</h2>
+<p>This paragraph uses an <span class="important">important class selector</span>.</p>
+<p id="highlight">This paragraph has an ID selector applied.</p>
+
+<h2>Combinator Selectors</h2>
+<div>
+  <p>This paragraph is inside a div (descendant selector).</p>
+  <p cla

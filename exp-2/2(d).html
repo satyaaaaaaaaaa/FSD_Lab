@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Thumbnail Image Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery a img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;   /* crop/fit images to exact size */
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .gallery a img:hover {
+      transform: scale(1.1);
+      border-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Thumbnail Image Gallery</h1>
+
+<div class="gallery">
+  <!-- Each thumbnail links to its full-size image -->
+  <a href="images/photo1-large.jpg" target="

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Audio & Video Embedding Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .media-block {
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    audio, video {
+      margin-top: 15px;
+      width: 100%;
+      outline: none;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Embedding Audio and Video in HTML5</h1>
+
+<!-- AUDIO EXAMPLE -->
+<div class="media-block">
+  <h2>Audio Example</h2>
+  <p>Listen to a sample audio file:</p>
+  <audio controls>
+    <!-- Replace "sample-audio.mp3" with your own file name -->
+    <source src="sample-audio.mp3" type="audio/mpeg">
+    <source src="sample-audio.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  <p><small>(Attributes used: <code>controls</code> for play/pause UI.

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Hyperlinks Example</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7fb;
+      color: #111;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: auto;
+      padding: 24px;
+    }
+    h1 { font-size: 28px; }
+    h2 { font-size: 20px; margin-top: 24px; }
+    a { color: #0055cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .example {
+      background:#fff;
+      border:1px solid #e0e0e6;
+      padding:16px;
+      border-radius:8px;
+      box-shadow:0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom:20px;
+    }
+    pre {
+      background:#f0f2f6;
+      padding:12px;
+      border-radius:6px;
+      overflow:auto;
+    }
+  </style>
+</head>
+<body>
+
+<h1>HTML Hyperlinks using &lt;a&gt; Tag</h1>
+<p>The <code>&lt;a&gt;</code> tag creates hyperlinks. The two most important attributes are:</p>
+<ul>
+  <li><strong>href</strong>: The destination URL or anchor ID.</li>
+  <li><strong>target</strong>: Where to open the link (e.g., <code>_self</code>, <code>_blank</code>).</li>
+</ul>
+
+<h2>1. Link opening in the <em>same tab</em> (default)</h2>
+<div class="example">
+  <pre>&lt;a href="https://www.example.com"&gt;Visit Example (same tab)&lt;/a&gt;</pre>
+  <p>Rendered output: <a href="https://www.example.com">Visit Example (same tab)</a></p>
+</div>
+
+<h2>2. Link opening in a <em>new tab/window</em></h2>
+<div class="example">
+  <pre>&lt;a href="https://www.wikipedia.org" target="_blank"&gt;Open Wikipedia in new tab&lt;/a&gt;</pre>
+  <p>Rendered output: <a href="https://www.wikipedia.org" target="_blank">Open Wikipedia in new tab</a></p>
+</div>
+
+<h2>3. Link to a <em>specific section on the same page</em></h2>
+<div class="example">
+  <pre>&lt;a href="#contact"&gt;Go to Contact Section&lt;/a&gt;</pre>
+  <p>Rendered output: <a href="#contact">Go to Contact Section</a></p>
+</div>
+
