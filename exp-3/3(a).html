@@ -1,71 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>HTML5 Semantic Elements Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>HTML5 Semantic Elements Example</title>
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background: #f7f7f7;
+      font-family: Arial, sans-serif;
+      margin: 20px;
       line-height: 1.6;
     }
     header, footer, nav, main, section, article, aside {
-      padding: 20px;
-      margin: 10px;
-      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #f0f0f0;
       border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
     }
-    header {
-      background: #4a90e2;
-      color: white;
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #0077cc;
     }
-    nav {
-      background: #e1e8f7;
+    figure {
+      margin: 0;
+      padding: 10px;
+      background-color: #ddd;
+      border-radius: 8px;
+      max-width: 300px;
     }
-    footer {
-      background: #4a90e2;
-      color: white;
+    figcaption {
       text-align: center;
+      font-style: italic;
+      padding-top: 8px;
+      color: #555;
+    }
+    .highlight {
+      color: red;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Website Header</h1>
+  <h1>My Website</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
-
 <main>
-  <section>
+  <section id="home">
     <article>
-      <h2>Article Title</h2>
-      <p>This is the content of the article section.</p>
+      <header>
+        <h2>Welcome to Our Website</h2>
+        <p>Published on <time datetime="2025-09-23">September 23, 2025</time></p>
+      </header>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/The_Autopsy_of_Jane_Doe.jpeg/250px-The_Autopsy_of_Jane_Doe.jpeg" alt="The Autopsy of Jane Doe movie poster" />
+
+        <figcaption>A descriptive caption for the image</figcaption>
+      </figure>
+      <p>This is the main content of the article. It uses semantic tags to improve structure.</p>
+      <footer>
+        <p>Author: Jane Doe</p>
+      </footer>
     </article>
   </section>
+
   <aside>
-    <h3>Related Links</h3>
-    <ul>
-      <li><a href="#">Link One</a></li>
-      <li><a href="#">Link Two</a></li>
-      <li><a href="#">Link Three</a></li>
-    </ul>
+    <h3>Related Information</h3>
+    <p>This aside contains additional information or links related to the main content.</p>
+    <div>
+      <p>Highlight: <span class="highlight">Important update!</span></p>
+    </div>
   </aside>
 </main>
 
 <footer>
-  <p>&copy; 2025 Your Website. All rights reserved.</p>
+  <p>© 2025 My Website. All rights reserved.</p>
 </footer>
 
 </body>
