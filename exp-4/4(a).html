@@ -1,114 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>CSS Selector Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>CSS Selector Types Demo</title>
   <style>
-  
-
     
+  
     p {
-      color: darkblue;
+      color: navy;
     }
-
-    #highlight {
-      background-color: yellow;
-      padding: 5px;
-    }
-
-    /* Class selector */
-    .important {
+    
+    #unique {
       font-weight: bold;
-      color: red;
+      color: darkred;
     }
-
     
-    h1, h2 {
-      text-align: center;
-      color: green;
+    .highlight {
+      background-color: yellow;
     }
-
-    
-    * {
-      font-family: Arial, Helvetica, sans-serif;
-    
-
   
+    h1, h2, h3 {
+      font-family: 'Arial Black', Arial, sans-serif;
+      margin-bottom: 10px;
+    }
+  
+    * {
+      box-sizing: border-box;
+    }
+
+   
     div p {
-      border: 1px dashed #333;
-      padding: 5px;
-    }
-
-    
-    div > p.child {
-      background-color: #e0f7fa;
-    }
-
-    
-    h2 + p {
-      color: purple;
-    }
-    
-    h2 ~ p.general {
       font-style: italic;
     }
-
+   
+    ul > li {
+      color: green;
+    }
   
+    h2 + p {
+      border-top: 2px solid #ccc;
+      padding-top: 5px;
+    }
+   
+    h3 ~ p {
+      color: teal;
+    }
 
     
     a:hover {
       color: orange;
+      text-decoration: underline;
+    }
+    li:nth-child(odd) {
+      background-color: #f0f0f0;
     }
 
-    
-    ul li:first-child {
+    p::first-letter {
+      font-size: 200%;
       font-weight: bold;
+      color: purple;
     }
-
-    
-    ul li:last-child {
-      color: green;
-    
-
-    
-    h3::before {
-      content: "★ ";
-      color: gold;
+    p::before {
+      content: "👉 ";
     }
 
   
-    h3::after {
-      content: " ★";
-      color: gold;
+    input[type="text"] {
+      border: 2px solid blue;
+      padding: 6px;
+      border-radius: 4px;
     }
-
-    
-    [title] {
-      text-decoration: underline;
-      cursor: help;
-    }
-
-    /* Exact match */
     a[target="_blank"] {
-      color: red;
+      color: crimson;
     }
-
-    
-    a[href*="example"] {
-      font-weight: bold;
-    }
-
   </style>
 </head>
 <body>
 
-<h1>CSS Selector Demonstration</h1>
-<h2>Simple Selectors</h2>
-<p>This paragraph uses an <span class="important">important class selector</span>.</p>
-<p id="highlight">This paragraph has an ID selector applied.</p>
+  <h1>CSS Selector Types Demo</h1>
 
-<h2>Combinator Selectors</h2>
-<div>
-  <p>This paragraph is inside a div (descendant selector).</p>
-  <p cla
+  <h2 id="unique">ID Selector Example (h2#unique)</h2>
+
+  <p class="highlight">This paragraph uses a class selector with a yellow background.</p>
+
+  <p>This paragraph uses an element selector for &lt;p&gt; elements.</p>
+
+  <div>
+    <p>This paragraph is a descendant of a &lt;div&gt; (descendant selector).</p>
+  </div>
+
+  <ul>
+    <li>First child item (child selector on &lt;ul&gt; > &lt;li&gt;)</li>
+    <li>Second child item</li>
+    <li>Third child item</li>
+  </ul>
+
+  <h2>Heading 2</h2>
+  <p>This paragraph follows an h2 and is styled with adjacent sibling selector.</p>
+
+  <h3>Heading 3</h3>
+  <p>This paragraph is a general sibling of h3 and styled accordingly.</p>
+
+  <a href="https://example.com" target="_blank">External link with target="_blank" (attribute selector)</a><br>
+  <a href="#">Internal link (hover to see pseudo-class)</a>
+
+  <p>Paragraph demonstrating pseudo-element selectors.</p>
+
+  <form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" />
+  </form>
+
+  <ul>
+    <li>Odd list item 1 (nth-child pseudo-class)</li>
+    <li>Even list item 2</li>
+    <li>Odd list item 3</li>
+  </ul>
+
+</body>
+</html>
