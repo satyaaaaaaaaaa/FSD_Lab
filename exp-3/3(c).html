@@ -1,23 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>CSS Styles Demo</title>
-  
+  <meta charset="UTF-8" />
+  <title>Different CSS Styles Demo</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    
-  
     h2 {
-      color: darkblue;
+      color: blue;
       text-align: center;
     }
-
-    p.internal {
-      font-size: 18px;
-      color: green;
+    .highlight {
+      background-color: yellow;
+      font-style: italic;
     }
+  </style>
+</head>
+<body>
 
-    
-    div.box {
-      border: 2px solid #333;
-      pa
+  <h2>Heading styled with internal CSS</h2>
+
+  <p class="highlight">Paragraph styled with internal CSS class selector.</p>
+
+  <p style="color: red; font-weight: bold;">
+    This paragraph is styled with inline CSS.
+  </p>
+
+  <p class="external-style">
+    This paragraph is styled with external CSS.
+  </p>
+
+</body>
+</html>
