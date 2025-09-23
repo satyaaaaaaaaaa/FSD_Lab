@@ -8,26 +8,26 @@
     body {
       margin: 0;
       padding: 0;
-      height: 200vh; /* Make page scrollable */
+      height: 200vh; 
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;
       position: relative;
     }
 
-    /* Background image using a pseudo-element for rotation */
+    
     body::before {
       content: "";
-      position: fixed; /* Keeps it in place during scroll */
-      top: 50%; /* halfway down the page */
+      position: fixed; 
+      top: 50%; 
       left: 50%;
-      width: 400px; /* width of the image */
-      height: 300px; /* height of the image */
-      background-image: url('your-image.jpg'); /* Replace with your image */
+      width: 400px; 
+      height: 300px; 
+      background-image: url('your-image.jpg'); 
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      transform: translate(-50%, -50%) rotate(15deg); /* center & tilt horizontally */
-      z-index: -1; /* behind the content */
+      transform: translate(-50%, -50%) rotate(15deg); 
+      z-index: -1;
     }
 
     .content {
