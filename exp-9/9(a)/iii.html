@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prime Numbers Up to N</title>
+</head>
+<body>
+  <h2>Prime Numbers Display</h2>
+  <p id="output"></p>
+
+  <script>
+    // Function to check if a number is prime
+    function isPrime(n) {
+      if (n < 2) return false;
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+      }
+      return true;
+    }
+
+    // Function to display primes up to given number
+    function displayPrimes(limit) {
+      let primes = [];
+      for (let i = 2; i <= limit; i++) {
+        if (isPrime(i)) primes.push(i);
+      }
+      return primes;
+    }
+
+    // Take input from user
+    let number = parseInt(prompt("Enter a number:"));
+    let primeNumbers = displayPrimes(number);
+
+    // Display primes
+    document.getElementById("output").innerHTML = 
+      "Prime numbers up to " + number + ":<br>" + primeNumbers.join(", ");
+  </script>
+</body>
+</html>

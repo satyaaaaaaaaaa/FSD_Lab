@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print 1 to 10 using Loops</title>
+</head>
+<body>
+  <h2>Print Numbers 1 to 10</h2>
+  <p id="forLoop"></p>
+  <p id="whileLoop"></p>
+  <p id="doWhileLoop"></p>
+
+  <script>
+    // Using for loop
+    let forText = "For Loop: ";
+    for(let i = 1; i <= 10; i++) {
+      forText += i + " ";
+    }
+    document.getElementById("forLoop").innerHTML = forText;
+
+    // Using while loop
+    let j = 1;
+    let whileText = "While Loop: ";
+    while(j <= 10) {
+      whileText += j + " ";
+      j++;
+    }
+    document.getElementById("whileLoop").innerHTML = whileText;
+
+    // Using do-while loop
+    let k = 1;
+    let doWhileText = "Do-While Loop: ";
+    do {
+      doWhileText += k + " ";
+      k++;
+    } while(k <= 10);
+    document.getElementById("doWhileLoop").innerHTML = doWhileText;
+  </script>
+</body>
+</html>

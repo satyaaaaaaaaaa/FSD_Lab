@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Denomination Calculator</title>
+</head>
+<body>
+  <h2>Bank Denomination</h2>
+
+  <script>
+    // Take amount input
+    let amount = parseInt(prompt("Enter the amount deposited:"));
+    let originalAmount = amount;
+
+    // Array of denominations
+    const notes = [100, 50, 20, 10, 5, 2, 1];
+    let output = "Denominations for Rs." + amount + ":<br>";
+
+    // Calculate count for each denomination
+    for (let i = 0; i < notes.length; i++) {
+      let count = Math.floor(amount / notes[i]);
+      if (count > 0) {
+        output += count + " - " + notes[i] + "’s<br>";
+        amount = amount % notes[i]; // remaining amount
+      }
+    }
+
+    document.write("<h3>" + output + "</h3>");
+    alert("Check the denominations displayed on the page for Rs." + originalAmount);
+  </script>
+</body>
+</html>

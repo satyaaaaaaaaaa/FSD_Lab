@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loops with Object Example</title>
+</head>
+<body>
+  <h2>Object Data Loops Demo</h2>
+  <p id="forIn"></p>
+  <p id="forEach"></p>
+  <p id="forOf"></p>
+
+  <script>
+    // User-defined object
+    const student = {
+      name: "Pavan",
+      age: 20,
+      course: "IT"
+    };
+
+    // 1. Using for-in (loop over object properties)
+    let forInText = "For-in Loop: ";
+    for (let key in student) {
+      forInText += key + "=" + student[key] + " ";
+    }
+    document.getElementById("forIn").innerHTML = forInText;
+
+    // 2. Using forEach (loop over array of object entries)
+    let forEachText = "forEach Loop: ";
+    Object.entries(student).forEach(([key, value]) => {
+      forEachText += key + "=" + value + " ";
+    });
+    document.getElementById("forEach").innerHTML = forEachText;
+
+    // 3. Using for-of (loop over array of object keys or values)
+    let forOfText = "For-of Loop: ";
+    for (let [key, value] of Object.entries(student)) {
+      forOfText += key + "=" + value + " ";
+    }
+    document.getElementById("forOf").innerHTML = forOfText;
+  </script>
+</body>
+</html>

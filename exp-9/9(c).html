@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form Validation</title>
+  <style>
+    input, button { margin: 5px; padding: 5px; }
+    span { color: red; }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+
+  <form id="regForm" onsubmit="return validateForm()">
+    Name: <input type="text" id="name"><span id="nameError"></span><br>
+    Mobile: <input type="text" id="mobile"><span id="mobileError"></span><br>
+    Email: <input type="text" id="email"><span id="emailError"></span><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let mobile = document.getElementById("mobile").value;
+      let email = document.getElementById("email").value;
+      let valid = true;
+
+      // Name validation: starts with alphabet, followed by alphanumeric, length >= 6
+      let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+      if (!namePattern.test(name)) {
+        document.getElementById("nameError").innerText = " Invalid Name";
+        valid = false;
+      } else {
+        document.getElementById("nameError").innerText = "";
+      }
+
+      // Mobile validation: 10 digits only
+      let mobilePattern = /^[0-9]{10}$/;
+      if (!mobilePattern.test(mobile)) {
+        document.getElementById("mobileError").innerText = " Invalid Mobile Number";
+        valid = false;
+      } else {
+        document.getElementById("mobileError").innerText = "";
+      }
+
+      // Email validation: format xxxxx@xxxx.xxx
+      let emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById("emailError").innerText = " Invalid Email";
+        valid = false;
+      } else {
+        document.getElementById("emailError").innerText = "";
+      }
+
+      return valid; // return false to prevent form submission if invalid
+    }
+  </script>
+</body>
+</html>

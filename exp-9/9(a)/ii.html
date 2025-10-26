@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fibonacci Series</title>
+</head>
+<body>
+  <h2>Fibonacci Series</h2>
+  <p id="output"></p>
+
+  <script>
+    // Function to generate Fibonacci series up to n
+    function fibonacciSeries(n) {
+      let series = [];
+      let a = 0, b = 1;
+
+      if (n >= 1) series.push(a);
+      if (n >= 2) series.push(b);
+
+      while (true) {
+        let next = a + b;
+        if (next > n) break;
+        series.push(next);
+        a = b;
+        b = next;
+      }
+
+      return series;
+    }
+
+    // Take input from user
+    let num = parseInt(prompt("Enter a number:"));
+    let fibSeries = fibonacciSeries(num);
+
+    // Display series
+    document.getElementById("output").innerHTML = "Fibonacci series up to " + num + ":<br>" + fibSeries.join(", ");
+  </script>
+</body>
+</html>
